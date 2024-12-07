@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Exam Management</title>
+  <script src="https://cdn.tailwindcss.com">
+  
+
+
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+   
+      
+      <div class="min-h-screen bg-gray-100">
+        <nav class="bg-blue-600">
+            <div class="container mx-auto px-4">
+              <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="text-white text-xl font-bold">
+                  <a href="/">Online Exam Management System</a>
+                </div>
+          
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-6">
+                  <a href="/" class="text-white hover:text-blue-300">Home</a>
+                  <a href="/dashboard.html" class="text-white hover:text-blue-300">Dashboard</a>
+                  <a href="/take-exam.html" class="text-white hover:text-blue-300">Exams</a>
+                  <a href="/view-results.html" class="text-white hover:text-blue-300">Results</a>
+                
+                </div>
+          
+                <!-- User Dropdown -->
+                <div class="hidden md:block relative">
+                  <button id="user-menu-button" class="text-white flex items-center focus:outline-none">
+                    <span class="mr-2">Emrul Kayes Ayon</span>
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <!-- Dropdown Menu -->
+                  <div id="user-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded shadow">
+                    <a href="/profile" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Profile</a>
+                    <a href="/settings" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Settings</a>
+                    <a href="/signin.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-500">Logout</a>              
+                </div>
+          
+                <!-- Mobile Menu Button -->
+                <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+                  </svg>
+                </button>
+              </div>
+          
+              <!-- Mobile Menu -->
+              <div id="mobile-menu" class="hidden md:hidden">
+                <a href="/" class="block px-4 py-2 text-white hover:bg-blue-500">Home</a>
+                <a href="/dashboard" class="block px-4 py-2 text-white hover:bg-blue-500">Dashboard</a>
+                <a href="/exams" class="block px-4 py-2 text-white hover:bg-blue-500">Exams</a>
+                <a href="/results" class="block px-4 py-2 text-white hover:bg-blue-500">Results</a>
+                <a href="/support" class="block px-4 py-2 text-white hover:bg-blue-500">Support</a>
+                <!-- <a href="/profile" class="block px-4 py-2 text-white hover:bg-blue-500">Profile</a> -->
+                <a href="/signin.html" class="block px-4 py-2 text-white hover:bg-blue-500">Logout</a>
+              </div>
+            </div>
+          </nav>
+        <div class="flex items-center justify-center min-h-screen bg-gray-100">
+            <div class="w-full max-w-3xl p-6 bg-white rounded shadow">
+              <h2 class="mb-6 text-2xl font-bold">Take Exam</h2>
+              <form>
+                <div class="mb-4">
+                  <p class="mb-2 text-sm font-medium">Question 1: What is 2 + 2?</p>
+                  <input id="q1" type="text" placeholder="Your answer"
+                    class="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="mb-4">
+                  <p class="mb-2 text-sm font-medium">Question 2: What is the capital of France?</p>
+                  <input id="q2" type="text" placeholder="Your answer"
+                    class="w-full px-4 py-2 text-gray-700 bg-gray-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <button
+                  class="px-4 py-2 text-white bg-green-600 rounded hover:bg-green-700">Submit</button>
+              </form>
+            </div>
+          </div>
+          
+          
+      </div>
+      
+  <!-- Content goes here -->
+  <script>
+    // Mobile menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuToggle.addEventListener('click', () => {
+ mobileMenu.classList.toggle('hidden');
+});
+
+// User dropdown toggle
+const userMenuButton = document.getElementById('user-menu-button');
+const userMenu = document.getElementById('user-menu');
+
+userMenuButton.addEventListener('click', () => {
+ userMenu.classList.toggle('hidden');
+});
+
+// Close dropdown on outside click
+document.addEventListener('click', (e) => {
+ if (!userMenuButton.contains(e.target) && !userMenu.contains(e.target)) {
+   userMenu.classList.add('hidden');
+ }
+});
+   </script>
+</body>
+</html>

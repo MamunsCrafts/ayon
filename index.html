@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Exam Management</title>
+  <script src="https://cdn.tailwindcss.com">
+  
+ 
+
+
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <nav class="bg-blue-600">
+        <div class="container mx-auto px-4">
+          <div class="flex items-center justify-between h-16">
+            <!-- Logo -->
+            <div class="text-white text-xl font-bold">
+              <a href="/">Online Exam Management System</a>
+            </div>
+      
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-6">
+              <a href="/" class="text-white hover:text-blue-300">Home</a>
+              <a href="/dashboard.html" class="text-white hover:text-blue-300">Dashboard</a>
+              <a href="/take-exam.html" class="text-white hover:text-blue-300">Exams</a>
+              <a href="/view-results.html" class="text-white hover:text-blue-300">Results</a>
+            
+            </div>
+      
+            <!-- User Dropdown -->
+            <div class="hidden md:block relative">
+              <button id="user-menu-button" class="text-white flex items-center focus:outline-none">
+                <span class="mr-2">Emrul Kayes Ayon</span>
+                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <!-- Dropdown Menu -->
+              <div id="user-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded shadow">
+                <a href="/profile" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Profile</a>
+                <a href="/settings" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Settings</a>
+                <a href="/signin.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-500">Logout</a>              
+            </div>
+      
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+            </button>
+          </div>
+      
+          <!-- Mobile Menu -->
+          <div id="mobile-menu" class="hidden md:hidden">
+            <a href="/" class="block px-4 py-2 text-white hover:bg-blue-500">Home</a>
+            <a href="/dashboard" class="block px-4 py-2 text-white hover:bg-blue-500">Dashboard</a>
+            <a href="/exams" class="block px-4 py-2 text-white hover:bg-blue-500">Exams</a>
+            <a href="/results" class="block px-4 py-2 text-white hover:bg-blue-500">Results</a>
+            <a href="/support" class="block px-4 py-2 text-white hover:bg-blue-500">Support</a>
+            <!-- <a href="/profile" class="block px-4 py-2 text-white hover:bg-blue-500">Profile</a> -->
+            <a href="/signin.html" class="block px-4 py-2 text-white hover:bg-blue-500">Logout</a>
+          </div>
+        </div>
+      </nav>
+        <!-- Content goes here -->
+    <!-- Hero Section -->
+  <header class="bg-blue-500 text-white py-16">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold mb-4">Welcome to Online Exam Management System</h1>
+      <p class="text-lg mb-6">Effortlessly manage and take exams from anywhere, anytime.</p>
+      <a href="/signup.html" class="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">
+        Get Started
+      </a>
+    </div>
+  </header>
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+          <h2 class="text-2xl font-bold mb-8">Why Choose Us?</h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <svg class="w-12 h-12 text-blue-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16l-4-4m0 0l4-4m-4 4h16" />
+              </svg>
+              <h3 class="text-xl font-semibold mb-2">Easy to Use</h3>
+              <p class="text-gray-600">Simplify exam creation, scheduling, and management with an intuitive interface.</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <svg class="w-12 h-12 text-blue-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11m-4-4l4 4-4 4m-4 4h14" />
+              </svg>
+              <h3 class="text-xl font-semibold mb-2">Seamless Integration</h3>
+              <p class="text-gray-600">Easily integrate with existing workflows and tools to streamline processes.</p>
+            </div>
+
+            <!-- Feature 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <svg class="w-12 h-12 text-blue-500 mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4H8l4-4m0 8v8m-4 0h8" />
+            </svg>
+            <h3 class="text-xl font-semibold mb-2">Secure & Reliable</h3>
+            <p class="text-gray-600">Built with security in mind to ensure safe and smooth examination processes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+   <!-- Call to Action Section -->
+   <section class="bg-blue-600 text-white py-12">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+      <p class="text-lg mb-6">Sign up today and experience the best online exam management platform.</p>
+      <a href="/signup.html" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
+        Sign Up Now
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Online Exam Management System. All rights reserved.</p>
+    </div>
+  </footer>
+      
+      <script>
+       // Mobile menu toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // User dropdown toggle
+  const userMenuButton = document.getElementById('user-menu-button');
+  const userMenu = document.getElementById('user-menu');
+
+  userMenuButton.addEventListener('click', () => {
+    userMenu.classList.toggle('hidden');
+  });
+
+  // Close dropdown on outside click
+  document.addEventListener('click', (e) => {
+    if (!userMenuButton.contains(e.target) && !userMenu.contains(e.target)) {
+      userMenu.classList.add('hidden');
+    }
+  });
+      </script>
+  <!-- Content goes here -->
+</body>
+</html>
