@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-blue-600">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="text-white text-xl font-bold">
+          <a href="/">Online Exam Management System</a>
+        </div>
+  
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="/" class="text-white hover:text-blue-300">Home</a>
+          <a href="/dashboard.html" class="text-white hover:text-blue-300">Dashboard</a>
+          <a href="/take-exam.html" class="text-white hover:text-blue-300">Exams</a>
+          <a href="/teacher-list.html" class="text-white hover:text-blue-300 bg-gray-700 px-2 py-1 rounded-lg">Teachers</a>
+          <a href="/view-results.html" class="text-white hover:text-blue-300">Results</a>
+        
+        </div>
+  
+        <!-- User Dropdown -->
+        <div class="hidden md:block relative">
+          <button id="user-menu-button" class="text-white flex items-center focus:outline-none">
+            <span class="mr-2">Emrul Kayes Ayon</span>
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <!-- Dropdown Menu -->
+          <div id="user-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded shadow">
+            <a href="/profile" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Profile</a>
+            <a href="/settings" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Settings</a>
+            <a href="/teacher-list.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-500 ">Teachers</a>
+            <a href="/signin.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-500">Logout</a>              
+        </div>
+  
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+  
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+        <a href="/" class="block px-4 py-2 text-white hover:bg-blue-500">Home</a>
+        <a href="/dashboard" class="block px-4 py-2 text-white hover:bg-blue-500">Dashboard</a>
+        <a href="/exams" class="block px-4 py-2 text-white hover:bg-blue-500">Exams</a>
+        <a href="/results" class="block px-4 py-2 text-white hover:bg-blue-500">Results</a>
+        <a href="/support" class="block px-4 py-2 text-white hover:bg-blue-500">Support</a>
+        <!-- <a href="/profile" class="block px-4 py-2 text-white hover:bg-blue-500">Profile</a> -->
+        <a href="/signin.html" class="block px-4 py-2 text-white hover:bg-blue-500">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="bg-blue-500 text-white py-8">
+    <div class="container mx-auto text-center">
+      <h1 class="text-3xl font-bold">Faculty Members</h1>
+      <p class="mt-2">Explore all registered teachers.</p>
+    </div>
+  </header>
+
+  <!-- Profile Lists -->
+  <main class="py-8">
+    <div class="container mx-auto">
+      <!-- Students Section -->
+     
+
+      <!-- Teachers Section -->
+      <section>
+        <h2 class="text-2xl font-semibold mb-4 text-center">Teachers List</h2>
+        <div class="flex flex-wrap space-x-6 space-y-4 items-center justify-center">
+          <!-- Single Teacher Profile -->
+          <div class="bg-white p-6 rounded-lg shadow ">
+            <img src="/formal.jpg" alt="Profile Image" class="w-20 h-20 rounded-full mx-auto mb-4">
+            <h3 class="text-lg font-bold text-center">Dr. Alice Johnson</h3>
+            <p class="text-center text-gray-600 mb-4">Teacher</p>
+            <div class="text-sm text-gray-600">
+              <p><strong>Email:</strong> alice.johnson@example.com</p>
+              <p><strong>Contact:</strong> +123 456 7890</p>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <img src="/formal.jpg" alt="Profile Image" class="w-20 h-20 rounded-full mx-auto mb-4">
+            <h3 class="text-lg font-bold text-center">Dr. Alice Johnson</h3>
+            <p class="text-center text-gray-600 mb-4">Teacher</p>
+            <div class="text-sm text-gray-600">
+              <p><strong>Email:</strong> alice.johnson@example.com</p>
+              <p><strong>Contact:</strong> +123 456 7890</p>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <img src="/formal.jpg" alt="Profile Image" class="w-20 h-20 rounded-full mx-auto mb-4">
+            <h3 class="text-lg font-bold text-center">Dr. Alice Johnson</h3>
+            <p class="text-center text-gray-600 mb-4">Teacher</p>
+            <div class="text-sm text-gray-600">
+              <p><strong>Email:</strong> alice.johnson@example.com</p>
+              <p><strong>Contact:</strong> +123 456 7890</p>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <img src="/formal.jpg" alt="Profile Image" class="w-20 h-20 rounded-full mx-auto mb-4">
+            <h3 class="text-lg font-bold text-center">Dr. Alice Johnson</h3>
+            <p class="text-center text-gray-600 mb-4">Teacher</p>
+            <div class="text-sm text-gray-600">
+              <p><strong>Email:</strong> alice.johnson@example.com</p>
+              <p><strong>Contact:</strong> +123 456 7890</p>
+            </div>
+          </div>
+          <!-- Add more teacher profiles as needed -->
+          <div class="bg-white p-6 rounded-lg shadow">
+            <img src="/formal.jpg" alt="Profile Image" class="w-20 h-20 rounded-full mx-auto mb-4">
+            <h3 class="text-lg font-bold text-center">Mr. Robert Brown</h3>
+            <p class="text-center text-gray-600 mb-4">Teacher</p>
+            <div class="text-sm text-gray-600">
+              <p><strong>Email:</strong> robert.brown@example.com</p>
+              <p><strong>Contact:</strong> +123 456 7890</p>
+            </div>
+          </div>
+         <!-- Single Teacher Profile -->
+         <div class="bg-white p-6 rounded-lg shadow items-center justify-center">
+          <img src="/formal.jpg" alt="Profile Image" class="w-20 h-20 rounded-full mx-auto mb-4">
+          <h3 class="text-lg font-bold text-center">Dr. Alice Johnson</h3>
+          <p class="text-center text-gray-600 mb-4">Teacher</p>
+          <div class="text-sm text-gray-600">
+            <p><strong>Email:</strong> alice.johnson@example.com</p>
+            <p><strong>Contact:</strong> +123 456 7890</p>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <img src="/formal.jpg" alt="Profile Image" class="w-20 h-20 rounded-full mx-auto mb-4">
+          <h3 class="text-lg font-bold text-center">Dr. Alice Johnson</h3>
+          <p class="text-center text-gray-600 mb-4">Teacher</p>
+          <div class="text-sm text-gray-600">
+            <p><strong>Email:</strong> alice.johnson@example.com</p>
+            <p><strong>Contact:</strong> +123 456 7890</p>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <img src="/formal.jpg" alt="Profile Image" class="w-20 h-20 rounded-full mx-auto mb-4">
+          <h3 class="text-lg font-bold text-center">Dr. Alice Johnson</h3>
+          <p class="text-center text-gray-600 mb-4">Teacher</p>
+          <div class="text-sm text-gray-600">
+            <p><strong>Email:</strong> alice.johnson@example.com</p>
+            <p><strong>Contact:</strong> +123 456 7890</p>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <img src="/formal.jpg" alt="Profile Image" class="w-20 h-20 rounded-full mx-auto mb-4">
+          <h3 class="text-lg font-bold text-center">Dr. Alice Johnson</h3>
+          <p class="text-center text-gray-600 mb-4">Teacher</p>
+          <div class="text-sm text-gray-600">
+            <p><strong>Email:</strong> alice.johnson@example.com</p>
+            <p><strong>Contact:</strong> +123 456 7890</p>
+          </div>
+        </div>
+        <!-- Add more teacher profiles as needed -->
+        <div class="bg-white p-6 rounded-lg shadow">
+          <img src="/formal.jpg" alt="Profile Image" class="w-20 h-20 rounded-full mx-auto mb-4">
+          <h3 class="text-lg font-bold text-center">Mr. Robert Brown</h3>
+          <p class="text-center text-gray-600 mb-4">Teacher</p>
+          <div class="text-sm text-gray-600">
+            <p><strong>Email:</strong> robert.brown@example.com</p>
+            <p><strong>Contact:</strong> +123 456 7890</p>
+          </div>
+        </div>
+        </div>
+       
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Online Exam Management System. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
